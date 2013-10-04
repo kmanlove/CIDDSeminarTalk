@@ -1,0 +1,1102 @@
+\documentclass[fleqn,xcolor=table]{beamer}
+%\usetheme{KEZMarburgThreeColor}
+\usetheme{Madrid}
+\definecolor{kezgreen}{HTML}{459C57}
+\definecolor{grey}{HTML}{CDC9C9}
+\definecolor{navy}{RGB}{0, 0, 128}
+\definecolor{darkred}{RGB}{139, 0, 0}
+\usepackage{pgf,pgfnodes, pgfpages}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{transparent}
+\usepackage{graphicx}
+\usepackage[absolute,overlay]{textpos}
+\newcommand{\semitransp}[2][20]{\color{fg!#1}#2}
+%\und{\semitransp}[2][35]{\color{fg!#1}#2}secolortheme{orchid}
+\usecolortheme{dove}
+\setbeamertemplate{blocks}[rounded][shadow=TRUE]
+%\newcommand\T{\rule{0pt}{3.6ex}}
+%\newcommand\B{\rule[-1.2ex]{0pt}{0pt}}
+\usepackage{color}
+%\setbeameroption{show notes} %un-comment to see the notes
+%\setbeameroption{show notes on second screen=right}
+
+
+
+
+%\tletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+    \hbox{%
+      \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author
+      in head/foot}%
+          \usebeamerfont{author in
+	  head/foot}\insertshortauthor%~~\beamer@ifempty{\insertshortinstitute}{}{(\insertshortinstitute)}
+	    \end{beamercolorbox}%
+	      \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title
+      in head/foot}%
+          \usebeamerfont{title in head/foot}\insertshorttitle
+	    \end{beamercolorbox}%
+	      \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date
+      in head/foot}%
+          \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+	      \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+	        \end{beamercolorbox}}%
+	  \vskip0pt%
+  }
+  \makeatother
+%setbeameroption{show notes on second screen=right}
+%\institution{Penn State}
+\author{Kezia Manlove}
+\title{Social connectivity/Offspring mortality}
+\begin{document}
+
+\begin{frame}[t]
+
+\vspace{.05in}
+%
+%\transparent{1}
+%\parbox[t]{3.5in}{\center{\color{darkblue}{Linking Adult Social Connectivity Patterns to Offspring Mortality in Bighorn Sheep}}
+%\vspace{.15in}
+%
+%\parbox[c]{3.5in}{\center{\color{kezred}{Big problems, small data}}}
+
+{\center{\color{navy}{Linking Adult Social Connectivity Patterns to
+Offspring Mortality in Bighorn Sheep}}}
+\vspace{.15in}
+
+%
+\includegraphics[width = \textwidth]{HornsInGrass_Cropped.JPG}
+\vspace{.2in}
+
+\footnotesize{\color{navy}{Kezia Manlove}}
+
+\vspace{.05in}
+
+{\color{navy} \today}
+\vspace{.2in}
+%}
+
+\note{\begin{itemize}
+	\item Collaborative effort: ID, WA, OR; PSU, WSU, USGS.
+	\item Second year grad student.
+	\item Fourth year with project.  
+	\item Pete is advisor
+	\item \textbf{Interest}: develop methods that rely on available data to
+		understand diseases in wildlife
+	\end{itemize}
+	}
+
+\end{frame}
+
+{\usebackgroundtemplate{\transparent{.35}\parbox[c][\paperheight][c]{\paperwidth}{\centering\includegraphics[width=\paperwidth]{CoverRam_Kamloops.jpg}}}
+
+	\section{Introduction}
+\begin{frame}[t]
+	\frametitle{\color{darkred}Pneumonia in Bighorn sheep}
+\begin{itemize}
+\item \small {\color{navy}Limits bighorn sheep population growth/reintroduction efforts in
+	US Rocky Mountains }
+\item \small {\color{navy}Historically linked to nearby domestic sheep
+}
+\item \small {\color{navy} Reservoir removal hasn't solved the problem}
+
+\end{itemize}
+
+{\color{darkred} Stereotypical Outbreak}
+\newline
+%
+	\includegraphics[height = .5\textheight]{PneumoniaOutbreakCartoon.pdf}
+%\begin{itemize}
+%{\small
+%\item {\color{navy} Reservoir removal hasn't mitigated pneumonia impacts}
+%%\item {\color{keztextblue}Reservoir removal hasn't mitigated pneumonia impacts}
+%%	\item \textit{Controlled data are sparse; basic knowledge is based on
+%%field observations}
+%
+%}
+%\end{itemize}
+
+\note{
+	\begin{itemize}
+		\item Bighorn sheep in trouble
+		\item Disease is reason
+	\end{itemize}
+}
+
+\end{frame}
+}
+%
+%\begin{frame}	
+%\frametitle{A stereotypcial pneumonia epidemic}
+%	\includegraphics[width = \textwidth]{PneumoniaOutbreakCartoon.pdf}
+%
+%\end{frame}
+
+\begin{frame}
+	\frametitle{\color{darkred} Heterogeneity in disease impacts}
+	\begin{columns}[t]
+		\column{.65\textwidth}
+		\vspace{.05in}
+
+%		\begin{minipage}[c][.6\textheight][c]{\linewidth}
+	\includegraphics[width =\textwidth]{Cassirer2013_LambMortHazFig_V2.pdf}
+%	\hspace{.05in}
+%	\includegraphics[width =
+%	.45\textwidth]{JAEPaper_LambHazards_11Feb2013.pdf}
+%		\end{minipage}
+	\newline
+	{\footnotesize \color{white}{Hypothesis: Variation explained by
+	incomplete exposure}}
+		\column{.35\textwidth}
+			\begin{minipage}[t][.8\textheight][t]{\linewidth}
+				\vspace{.4in}
+%
+			\begin{itemize}
+				{\footnotesize
+				\item[] {\color{white} \scriptsize Pneumonia $\implies$ diminished recruitment}
+				\item[] {\color{white} \scriptsize Magnitude of declines varies} 
+				}
+			\end{itemize}
+		\end{minipage}
+	\end{columns}
+		
+\end{frame}
+
+\begin{frame}
+	\frametitle{\color{darkred} Heterogeneity in disease impacts}
+	\begin{columns}[t]
+		\column{.65\textwidth}
+		\vspace{.05in}
+
+%		\begin{minipage}[c][.6\textheight][c]{\linewidth}
+	\includegraphics[width =\textwidth]{Cassirer2013_LambMortHazFig_V2.pdf}
+	\newline
+	{\footnotesize \color{white}{Hypothesis: Variation explained by
+	incomplete exposure}}
+%	\hspace{.05in}
+%	\includegraphics[width =
+%	.45\textwidth]{JAEPaper_LambHazards_11Feb2013.pdf}
+%		\end{minipage}
+		\column{.35\textwidth}
+			\begin{minipage}[t][.8\textheight][t]{\linewidth}
+				\vspace{.4in}
+
+			\begin{itemize}
+				{\footnotesize
+				\item {\color{navy} \scriptsize Pneumonia
+					reduces summer lamb survival}
+					\vspace{.1in}
+				\item {\color{navy} \scriptsize Impact is
+					variable in magnitude} 
+				}
+			\end{itemize}
+		\end{minipage}
+%		\end{column}
+	\end{columns}
+		
+\end{frame}
+
+\begin{frame}
+	\frametitle{\color{darkred} Heterogeneity in disease impacts}
+	\begin{columns}[t]
+		\column{.65\textwidth}
+		\vspace{.05in}
+
+%		\begin{minipage}[c][.6\textheight][c]{\linewidth}
+	\includegraphics[width =\textwidth]{Cassirer2013_LambMortHazFig_V2.pdf}
+	\newline
+	\vspace{.1in}
+
+	{\footnotesize \color{darkred}{Hypothesis: Variation explained by
+	incomplete exposure}}
+%	\hspace{.05in}
+%	\includegraphics[width =
+%	.45\textwidth]{JAEPaper_LambHazards_11Feb2013.pdf}
+%		\end{minipage}
+		\column{.35\textwidth}
+			\begin{minipage}[t][.8\textheight][t]{\linewidth}
+				\vspace{.4in}
+
+			\begin{itemize}
+				{\footnotesize
+				\item {\color{navy} \scriptsize Pneumonia
+					reduces summer lamb survival}
+				\vspace{.1in}
+				\item {\color{navy} \scriptsize Impact is
+					variable in magnitude} 
+				}
+			\end{itemize}
+		\end{minipage}
+%		\end{column}
+	\end{columns}
+\end{frame}
+%
+%\section{Epidemic Scale}
+%\begin{frame}[t]
+%\frametitle{\color{darkred} Is an entire population vulnerable to disease?}
+%\vspace{.1in}
+%
+%\begin{itemize}
+%	\item[] {\color{darkred} Relevance}
+%		\begin{itemize}
+%		\item \color{navy} \footnotesize Management actions occur at population level
+%			\vspace{.1in}
+%			
+%			\item \color{navy} \footnotesize Anecdotally, mortalities cluster locally within populations
+%		\end{itemize}
+%		\vspace{.2in}
+%
+%	\item[] {\color{darkred} Specific questions}
+%		\begin{itemize}
+%			\item \color{navy} \footnotesize Do populations differ systematically in their
+%				social contact structures?
+%%				\begin{itemize}
+%%					\item {\color{navy} Hypothesis:
+%%						Populations will differ in
+%%					their contact patterns.}
+%%				\end{itemize}
+%				\vspace{.1in}
+%
+%			\item \color{navy} \footnotesize What does clustering of lamb mortalities mean re: adult
+%			shedding rates?
+%%				\begin{itemize}
+%%					\item {\color{keztextblue} Hypothesis:
+%%						Lamb mortality patterns will be
+%%					consistent with population-level social
+%%				contact patterns.}
+%%				\end{itemize}
+%		\end{itemize}
+%	\end{itemize}
+%\end{frame}
+%%
+{\usebackgroundtemplate{\transparent{.35}\parbox[c][\paperheight][c]{\paperwidth}{\centering\includegraphics[height=\paperheight]{CoverEwe.jpg}}}
+\begin{frame}[t]
+	\begin{itemize}
+		\item[] \color{navy} \footnotesize \textbf{Do bighorn sheep populations vary in their social
+			structuring?}
+			\vspace{.8in}
+		\item[] \color{navy} \footnotesize \textbf{Does social
+				structuring account for variation in
+			summer lamb survival?}
+			\vspace{.8in}
+		\item[] \color{navy} \footnotesize \textbf{Can we use information on social
+			groups to understand 
+			epidemiological rates?}
+	\end{itemize}
+\end{frame}
+}
+%
+%\section{Data Analysis}
+%\begin{frame}[t]
+%	\frametitle{\color{darkred} Data Collection}
+%%\begin{frame}
+%	\hspace{.18in}
+%	\includegraphics[height = .48\textheight]{HelicopterInboundGIMP.jpg}
+%	\hspace{.09in}
+%	\includegraphics[height = .48\textheight]{1389WithLambGIMP.jpg}\\
+%	\hspace{.18in}
+%	\includegraphics[height = .42\textheight]{LostineSickLamb.jpg}
+%	\hspace{.1in}
+%	\includegraphics[height = .42\textheight]{DeadLambGIMP.jpg} 
+%\end{frame}
+%
+%{\usebackgroundtemplate{\transparent{.35}\parbox[c][\paperheight][c]{\paperwidth}{\centering\includegraphics[width=\paperwidth]{CoverRam_Kamloops.jpg}}}
+
+
+\begin{frame}[t]
+\frametitle{\color{darkred} Social structure through contact networks}
+%	\begin{itemize}
+%		\item {\color{keztextblue}Network Construction}
+	\begin{itemize}
+		{\small
+		\item \color{navy} Relocation data at population-summer scale 
+			\begin{itemize}
+				\item[] \color{navy} {\footnotesize 3 populations, 15
+					years/population}
+			\end{itemize}
+		\item \color{navy} Built social contact networks of radiocollared ewes
+%		\item Focussed on edgeweights and communities within networks
+		}
+	\end{itemize}
+	\vspace{.3in}
+%\end{itemize}
+%	\includegraphics[width = .45\textwidth]{Imnaha2002.jpg}
+%	\hspace{.05in}
+%%	\includegraphics[width = .45\textwidth]{Redbird1998.jpg}
+%\end{frame}
+%
+%\begin{frame}
+%\frametitle{Networks}
+%	\includegraphics[width = .45\textwidth]{Redbird1998.jpg}
+%	\includegraphics[width = .45\textwidth]{Redbird1998_Revised.pdf}
+%	\textwidth]{KeyPopComponentDescriptions_03Oct2013.pdf}
+	\hspace{.15in}
+%	\includegraphics[width = .45\textwidth]{Redbird1998.jpg}
+%	\includegraphics[width = .45\textwidth]{Imnaha2002.jpg}
+%	\includegraphics[width = .45\textwidth]{Imnaha2002_revised.pdf}
+\note{
+	\begin{itemize}
+		\item Nodes = radiocollared ewes
+		\item Edges link ewes observed together at least once
+		\item edges weighted by association index
+		\item Red = lamb died; blue = lamb survived through Oct 1
+	\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}[t]
+\frametitle{\color{darkred} Social structure through contact networks}
+%	\begin{itemize}
+%		\item {\color{keztextblue}Network Construction}
+	\begin{itemize}
+		{\small
+		\item \color{navy} Relocation data at population-summer scale 
+			\begin{itemize}
+				\item[] \color{navy} {\footnotesize 3 populations, 15
+					years/population}
+			\end{itemize}
+		\item \color{navy} Built social contact networks of radiocollared ewes
+%		\item Focussed on edgeweights and communities within networks
+		}
+	\end{itemize}
+	\vspace{.3in}
+%\end{itemize}
+%	\includegraphics[width = .45\textwidth]{Imnaha2002.jpg}
+%	\hspace{.05in}
+%%	\includegraphics[width = .45\textwidth]{Redbird1998.jpg}
+%\end{frame}
+%
+%\begin{frame}
+%\frametitle{Networks}
+%	\includegraphics[width = .45\textwidth]{Redbird1998.jpg}
+	\includegraphics[width = .45\textwidth]{Redbird1998_Revised.pdf}
+%	\textwidth]{KeyPopComponentDescriptions_03Oct2013.pdf}
+	\hspace{.15in}
+%	\includegraphics[width = .45\textwidth]{Redbird1998.jpg}
+%	\includegraphics[width = .45\textwidth]{Imnaha2002.jpg}
+%	\includegraphics[width = .45\textwidth]{Imnaha2002_revised.pdf}
+\note{
+	\begin{itemize}
+		\item Nodes = radiocollared ewes
+		\item Edges link ewes observed together at least once
+		\item edges weighted by association index
+		\item Red = lamb died; blue = lamb survived through Oct 1
+	\end{itemize}
+}
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{\color{darkred} Social structure through contact networks}
+%	\begin{itemize}
+%		\item {\color{keztextblue}Network Construction}
+	\begin{itemize}
+		{\small
+		\item \color{navy} Relocation data at population-summer scale 
+			\begin{itemize}
+				\item[] \color{navy} {\footnotesize 3 populations, 15
+					years/population}
+			\end{itemize}
+		\item \color{navy} Built social contact networks of radiocollared ewes
+%		\item Focussed on edgeweights and communities within networks
+		}
+	\end{itemize}
+	\vspace{.3in}
+%\end{itemize}
+%	\includegraphics[width = .45\textwidth]{Imnaha2002.jpg}
+%	\hspace{.05in}
+%%	\includegraphics[width = .45\textwidth]{Redbird1998.jpg}
+%\end{frame}
+%
+%\begin{frame}
+%\frametitle{Networks}
+%	\includegraphics[width = .45\textwidth]{Redbird1998.jpg}
+	\includegraphics[width = .45\textwidth]{Redbird1998_Revised.pdf}
+%	\textwidth]{KeyPopComponentDescriptions_03Oct2013.pdf}
+	\hspace{.15in}
+%	\includegraphics[width = .45\textwidth]{Redbird1998.jpg}
+%	\includegraphics[width = .45\textwidth]{Imnaha2002.jpg}
+	\includegraphics[width = .45\textwidth]{Imnaha2002_revised.pdf}
+\note{
+	\begin{itemize}
+		\item Nodes = radiocollared ewes
+		\item Edges link ewes observed together at least once
+		\item edges weighted by association index
+		\item Red = lamb died; blue = lamb survived through Oct 1
+	\end{itemize}
+}
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{\color{darkred} Do populations differ systematically in their social contact
+patterns?}
+\vspace{.2in}
+
+	\includegraphics[width =
+	\textwidth]{KeyPopComponentDescriptions_03Oct2013.pdf}
+\note{
+	\begin{itemize}
+		\item Explain Imnaha on LHS
+		\item ``just a few examples...''
+	\end{itemize}
+}
+
+\end{frame}
+
+
+{\usebackgroundtemplate{\transparent{.35}\parbox[c][\paperheight][c]{\paperwidth}{\centering\includegraphics[height=\paperheight]{CoverEwe.jpg}}}
+\begin{frame}[t]
+	\begin{itemize}
+		\item[] \color{navy} \footnotesize \textbf{Do bighorn sheep populations vary in their social
+			structuring?}
+			\vspace{.1in}
+			\color{darkred} \textbf{Yes.}
+
+			\includegraphics[width =
+	.3\textwidth]{KeyCompos_simple.pdf}
+			\vspace{.1in}
+		\item[] \color{navy} \footnotesize Does social structuring account for variation in
+			summer lamb survival?
+			\vspace{.8in}
+		\item[] \color{navy} \footnotesize Can we leverage information on social groups to 
+			understand epidemiological rates?
+	\end{itemize}
+\end{frame}
+}
+%{\setbeamercolor{background canvas}{bg = white}
+%\begin{frame}
+%	\frametitle{\color{darkred} Lamb survival models}
+%%\begin{itemize}
+%%\item {\color{keztextblue} Lamb Mortality Analysis} 
+%			\begin{itemize}
+%				{\small
+%				\item Fit Cox proportional hazards models for
+%					lamb survival
+%				\item Estimated random effects at three levels
+%					\begin{itemize}
+%						\item Component within
+%							population-year
+%						\item Population-year
+%						\item Population
+%					\end{itemize}
+%				\item Compared variance captured at each level
+%					of structuring
+%				}
+%			\end{itemize}
+%%	\end{itemize}
+%
+%\end{frame}
+%}
+
+
+\begin{frame}[t]
+	\frametitle{\color{darkred} Lamb Survival Models}
+	
+	\vspace{.2in}
+	\begin{itemize}
+		\item {\color{navy} Examined lamb survival in pneumonia and
+			healthy years}
+		\item {\color{navy} Focused on nested shared frailty structure}
+			\begin{itemize}
+				\item[] \color{navy} Populations
+				\item[] \color{navy} Years in populations
+				\item[] \color{navy} Groups in years in populations
+			\end{itemize}
+	\end{itemize}
+	\vspace{.2in}
+
+%	\footnotesize{\color{navy} For lambs in the \color{darkred}$k^{th}$
+%		component \color{navy}of the
+%		\color{darkred}$j^{th}$ year \color{navy}in the
+%		\color{darkred}$i^{th}$ population\color{navy}, hazard at time
+%		$t$ ($h_{ijk}(t)$) is:
+%\[h_{ijkl}(t)=h_{0}(t)exp\left[\mathbf{Z_{i}}b_{i} +\mathbf{Z_{ij}} b_{ij} +
+%\mathbf{Z_{ijk}} b_{ijk}\right]\]
+%}
+	\note{``Shared frailty'' is survival modeling analog of REs}
+\end{frame}
+
+\begin{frame}[t]
+	\frametitle{\color{darkred} Does social structuring account for
+	variation in summer lamb survival?}
+	\vspace{.2in}
+
+	\includegraphics[width =
+	\textwidth]{VarDecompExplanation_03Oct2013_slide1.pdf}
+%\begin{itemize}
+%	\item Data from 50 population-summers 
+%		\begin{itemize}
+%			\item Up to 15 years
+%			\item Four populations
+%		\end{itemize}
+%%		\vspace{.2in}
+%	
+%\end{itemize}
+%
+%\includegraphics[height =
+%.6\textwidth]{VarianceDecompDensities_01Oct2013V2.pdf}
+\note{
+	\begin{itemize}
+		\item Scenario 1: all variation between populations $\implies$
+			high variation in Pop effect
+		\item Scenario 2: high variation within pops, low between pops
+			$\implies$ high variation in group
+		\item Scenario 3: low between pop variation
+	\end{itemize}
+}
+\end{frame}
+
+\begin{frame}[t]
+	\frametitle{\color{darkred} Does social structuring account for
+	variation in summer lamb survival?}
+	\vspace{.2in}
+
+	\includegraphics[width =
+	\textwidth]{VarDecompExplanation_03Oct2013_slide2.pdf}
+\end{frame}
+
+
+{\usebackgroundtemplate{\transparent{.35}\parbox[c][\paperheight][c]{\paperwidth}{\centering\includegraphics[height=\paperheight]{CoverEwe.jpg}}}
+\begin{frame}[t]
+	\begin{itemize}
+		\item[] \footnotesize \color{navy} Do bighorn sheep populations vary in their social
+			structuring?
+			\color{darkred} Yes.
+
+			\includegraphics[width =
+	.3\textwidth]{KeyCompos_simple.pdf}
+			\vspace{.1in}
+		\item[] \footnotesize \color{navy} \textbf{Does social structuring account for variation in
+			summer lamb survival?}
+			\color{darkred} \textbf{Yes.}
+
+			\includegraphics[width =
+	.3\textwidth]{REhists_simple.pdf}
+			\vspace{.1in}
+		\item[] \footnotesize \color{navy} Can we leverage information on social groups to 
+			understand epidemiological rates?
+	\end{itemize}
+\end{frame}
+}
+%
+%\begin{frame}[t]
+%	\frametitle{\color{darkred} Summary thus far}
+%	\vspace{.2in}
+%
+%	\begin{enumerate}
+%		\item {\color{navy} Social substructuring differs between 
+%			populations}
+%		\vspace{.1in}
+%
+%		\item \color{navy} Social substructuring explains significant 
+%			portion of variation in lamb survival
+%	\end{enumerate}
+%\vspace{.2in}
+%\begin{center}
+%	{\Large {\color{darkred} Can we use differences in social substructuring
+%	to learn something about epidemiological rates?}}
+%\end{center}
+%\end{frame}
+%
+\section{Simulations}
+\begin{frame}[t]
+	\frametitle{\color{darkred} Simulation}
+\footnotesize \color{navy}Estimate
+\begin{enumerate}
+	\item{\footnotesize \color{navy}Proportion of ewes transmitting to
+		lambs ($\pi$)}
+	\item{\footnotesize \color{navy}Disease-induced mortality rate in lambs
+		($\alpha$)} 
+\end{enumerate}
+
+\vspace{.2in}
+{\color{navy} Approach}
+{\footnotesize
+	\begin{itemize}
+		\item \scriptsize \color{navy}Individual-based 
+			\color{red}S\color{navy}usceptible-\color{red}I\color{navy}nfected structure
+			\[I_{k, t} = \left\{\text{Infected neighbors
+			of lamb }k \text{ at beginning of timestep }
+	t\right\}\] \[P(k \text{ becomes infected in timestep t}) = 1-exp\left(\sum_{i \in
+			I_{k, t}}Edgeweight_i\right)\]
+		\item \scriptsize \color{navy}Simulated epidemics on empirical contact network
+		\item \scriptsize \color{navy}Systematically varied $\pi$ and $\alpha$
+		\item \scriptsize \color{navy}Compared simulated lamb mortality
+			to observed lamb mortality
+%			\begin{itemize}
+%				\item \scriptsize \color{navy}Proportion of ewes that transmit
+%					pneumonia to their lambs
+%				\item \scriptsize \color{navy}Lamb mortality rate | Exposure
+%			\end{itemize}
+%		
+%		\item Ran 100 replicate sims at 10 levels across each dimension
+%			of parameter space
+%		\item Sims ``successful'' if simmed lamb
+%			mortality rate fell within 1 sd of
+%			observed rate
+%		\item ID'd regions of parameter space where sims were
+%			successful at least 75\% of the time
+	\end{itemize}
+}
+\end{frame}
+
+\begin{frame}
+\frametitle{\color{darkred} Can we leverage information on social groups to
+udnerstand epidemiological rates?}
+\vspace{.1in}
+
+%	\includegraphics[width = .35\textwidth]{BlackButte1997.jpg}
+%	\hspace{.05in}
+%	\includegraphics[width = .55\textwidth]{BLACK_BUTTE_1997_Heatmap.pdf}
+\begin{center}
+\includegraphics[width =
+	\textwidth]{BB97NetworkAndHeatmap_03Oct2013_slide1.pdf}
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\color{darkred} Can we leverage information on social groups to
+understand epidemiological rates?}
+\vspace{.1in}
+
+%	\includegraphics[width = .35\textwidth]{BlackButte1997.jpg}
+%	\hspace{.05in}
+%	\includegraphics[width = .55\textwidth]{BLACK_BUTTE_1997_Heatmap.pdf}
+\begin{center}
+\includegraphics[width =
+	\textwidth]{BB97NetworkAndHeatmap_03Oct2013_slide2.pdf}
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\color{darkred} Can we leverage information on social groups to
+understand epidemiological rates?}
+\vspace{.1in}
+
+%	\includegraphics[width = .35\textwidth]{BlackButte1997.jpg}
+%	\hspace{.05in}
+%	\includegraphics[width = .55\textwidth]{BLACK_BUTTE_1997_Heatmap.pdf}
+\begin{center}
+\includegraphics[width =
+	\textwidth]{BB97NetworkAndHeatmap_03Oct2013_slide3.pdf}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{\color{darkred} Can we leverage information on social groups to
+understand epidemiological rates?}
+\vspace{.1in}
+
+%	\includegraphics[width = .35\textwidth]{BlackButte1997.jpg}
+%	\hspace{.05in}
+%	\includegraphics[width = .55\textwidth]{BLACK_BUTTE_1997_Heatmap.pdf}
+\begin{center}
+\includegraphics[width =
+	\textwidth]{BB97NetworkAndHeatmap_03Oct2013.pdf}
+\end{center}
+
+\end{frame}
+%\begin{frame}
+%\begin{frame}
+%\frametitle{Broadscale Simulation Outputs}
+%
+%\begin{itemize}
+%	\includegraphics[width = .75\textwidth]{ParamCoverage_inkscape.pdf}
+%\end{itemize}
+%\end{frame}
+%
+
+%{\usebackgroundtemplate{\transparent{.35}\parbox[c][\paperheight][c]{\paperwidth}{\centering\includegraphics[height=\paperheight]{CoverEwe.jpg}}}
+%\begin{frame}[t]
+%	\begin{itemize}
+%		\item[] \color{navy} \footnotesize Do bighorn sheep populations vary in their social
+%			structuring?
+%			\color{darkred} Yes.
+%
+%			\includegraphics[width =
+%	.3\textwidth]{KeyCompos_simple.pdf}
+%			\vspace{.1in}
+%		\item[] \color{navy} \footnotesize Does social structuring account for variation in
+%			summer lamb survival?
+%			\color{darkred} Yes.
+%
+%			\includegraphics[width =
+%	.3\textwidth]{REhists_simple.pdf}
+%			\vspace{.1in}
+%		\item[] \color{navy} \footnotesize \textbf{Can we leverage
+%				information on social groups to understand 
+%			epidemiological rates?}
+%			\color{darkred} \textbf{Yes.}
+%
+%			\includegraphics[width =
+%	.2\textwidth]{Heatmap_simple.pdf}
+%	\end{itemize}
+%\end{frame}
+%}
+%
+{\usebackgroundtemplate{\transparent{.35}\parbox[c][\paperheight][c]{\paperwidth}{\centering\includegraphics[height=\paperheight]{CoverEwe.jpg}}}
+\begin{frame}[t]
+	\begin{itemize}
+		\item[] \color{navy} \footnotesize Do bighorn sheep populations vary in their social
+			structuring?
+			\color{darkred} Yes.
+	\begin{columns}
+		\column{.3\textwidth}
+			\includegraphics[width =
+			\textwidth]{KeyCompos_simple.pdf}
+			\vspace{.1in}
+		\column{.7\textwidth}
+%			\footnotesize \color{darkred} Appropriate management
+%			strategy may vary from population to population
+	\end{columns}
+		\item[] \color{navy} \footnotesize Does social structuring account for variation in
+			summer lamb survival?
+			\color{darkred} Yes.
+	\begin{columns}
+		\column{.3\textwidth}
+			\includegraphics[width =
+			\textwidth]{REhists_simple.pdf}
+			\vspace{.1in}
+		\column{.7\textwidth}
+%			\footnotesize \color{darkred}Management efforts should
+%			account for local structuring
+	\end{columns}
+
+			\vspace{.1in}
+		\item[] \color{navy} \footnotesize \textbf{Can we leverage
+				information on social groups to understand 
+			epidemiological rates?}
+			\color{darkred} \textbf{Yes.}
+
+	\begin{columns}
+		\column{.3\textwidth}
+			\includegraphics[width =
+			.8\textwidth]{Heatmap_simple.pdf}
+			\vspace{.1in}
+		\column{.7\textwidth}
+%			\footnotesize \color{darkred}Don't overlook
+%			heterogeneity in lamb outcomes
+	\end{columns}
+			\includegraphics[width =
+	.2\textwidth]{Heatmap_simple.pdf}
+	\end{itemize}
+\end{frame}
+}
+
+\section{Conclusions}
+{\usebackgroundtemplate{\transparent{.35}\parbox[c][\paperheight][c]{\paperwidth}{\centering\includegraphics[height=\paperheight]{CoverEwe.jpg}}}
+\begin{frame}[t]
+	\begin{itemize}
+		\item[] \color{navy} \footnotesize Do bighorn sheep populations vary in their social
+			structuring?
+			\color{darkred} Yes.
+	\begin{columns}
+		\column{.3\textwidth}
+			\includegraphics[width =
+			\textwidth]{KeyCompos_simple.pdf}
+			\vspace{.1in}
+		\column{.7\textwidth}
+%			\footnotesize \color{darkred} Appropriate management
+%			strategy may vary from population to population
+	\end{columns}
+		\item[] \color{navy} \footnotesize Does social structuring account for variation in
+			summer lamb survival?
+			\color{darkred} Yes.
+	\begin{columns}
+		\column{.3\textwidth}
+			\includegraphics[width =
+			\textwidth]{REhists_simple.pdf}
+			\vspace{.1in}
+		\column{.7\textwidth}
+%			\footnotesize \color{darkred}Management efforts should
+%			account for local structuring
+	\end{columns}
+
+			\vspace{.1in}
+		\item[] \color{navy} \footnotesize Can we leverage
+				information on social groups to understand 
+			epidemiological rates?
+			\color{darkred} Yes.
+
+	\begin{columns}
+		\column{.3\textwidth}
+			\includegraphics[width =
+			.8\textwidth]{Heatmap_simple.pdf}
+			\vspace{.1in}
+		\column{.7\textwidth}
+%			\footnotesize \color{darkred}Don't overlook
+%			heterogeneity in lamb outcomes
+	\end{columns}
+			\includegraphics[width =
+	.2\textwidth]{Heatmap_simple.pdf}
+	\end{itemize}
+\end{frame}
+}
+{\usebackgroundtemplate{\transparent{.35}\parbox[c][\paperheight][c]{\paperwidth}{\centering\includegraphics[height=\paperheight]{CoverEwe.jpg}}}
+\begin{frame}[t]
+	\begin{itemize}
+		\item[] \color{navy} \footnotesize Do bighorn sheep populations vary in their social
+			structuring?
+			\color{darkred} Yes.
+	\begin{columns}
+		\column{.3\textwidth}
+			\includegraphics[width =
+			\textwidth]{KeyCompos_simple.pdf}
+			\vspace{.1in}
+		\column{.7\textwidth}
+			\footnotesize \color{darkred} \textbf{Appropriate management
+			strategy may vary from population to population}
+	\end{columns}
+		\item[] \color{navy} \footnotesize Does social structuring account for variation in
+			summer lamb survival?
+			\color{darkred} Yes.
+	\begin{columns}
+		\column{.3\textwidth}
+			\includegraphics[width =
+			\textwidth]{REhists_simple.pdf}
+			\vspace{.1in}
+		\column{.7\textwidth}
+%			\footnotesize \color{darkred}Management efforts should
+%			account for local structuring
+	\end{columns}
+
+			\vspace{.1in}
+		\item[] \color{navy} \footnotesize Can we leverage
+				information on social groups to understand 
+			epidemiological rates?
+			\color{darkred} Yes.
+
+	\begin{columns}
+		\column{.3\textwidth}
+			\includegraphics[width =
+			.8\textwidth]{Heatmap_simple.pdf}
+			\vspace{.1in}
+		\column{.7\textwidth}
+%			\footnotesize \color{darkred}Don't overlook
+%			heterogeneity in lamb outcomes
+	\end{columns}
+			\includegraphics[width =
+	.2\textwidth]{Heatmap_simple.pdf}
+	\end{itemize}
+\end{frame}
+}
+%
+%\begin{frame}[t]
+
+{\usebackgroundtemplate{\transparent{.35}\parbox[c][\paperheight][c]{\paperwidth}{\centering\includegraphics[height=\paperheight]{CoverEwe.jpg}}}
+\begin{frame}[t]
+	\begin{itemize}
+		\item[] \color{navy} \footnotesize Do bighorn sheep populations vary in their social
+			structuring?
+			\color{darkred} Yes.
+	\begin{columns}
+		\column{.3\textwidth}
+			\includegraphics[width =
+			\textwidth]{KeyCompos_simple.pdf}
+			\vspace{.1in}
+		\column{.7\textwidth}
+			\footnotesize \color{darkred} Appropriate management
+			strategy may vary from population to population
+	\end{columns}
+		\item[] \color{navy} \footnotesize Does social structuring account for variation in
+			summer lamb survival?
+			\color{darkred} Yes.
+	\begin{columns}
+		\column{.3\textwidth}
+			\includegraphics[width =
+			\textwidth]{REhists_simple.pdf}
+			\vspace{.1in}
+		\column{.7\textwidth}
+			\footnotesize \color{darkred} \textbf{Management efforts should
+			account for local structuring}
+	\end{columns}
+
+			\vspace{.1in}
+		\item[] \color{navy} \footnotesize Can we leverage
+				information on social groups to understand 
+			epidemiological rates?
+			\color{darkred} Yes.
+
+	\begin{columns}
+		\column{.3\textwidth}
+			\includegraphics[width =
+			.8\textwidth]{Heatmap_simple.pdf}
+			\vspace{.1in}
+		\column{.7\textwidth}
+%			\footnotesize \color{darkred}Don't overlook
+%			heterogeneity in lamb outcomes
+	\end{columns}
+			\includegraphics[width =
+	.2\textwidth]{Heatmap_simple.pdf}
+	\end{itemize}
+\end{frame}
+}
+
+{\usebackgroundtemplate{\transparent{.35}\parbox[c][\paperheight][c]{\paperwidth}{\centering\includegraphics[height=\paperheight]{CoverEwe.jpg}}}
+\begin{frame}[t]
+	\begin{itemize}
+		\item[] \color{navy} \footnotesize Do bighorn sheep populations vary in their social
+			structuring?
+			\color{darkred} Yes.
+	\begin{columns}
+		\column{.3\textwidth}
+			\includegraphics[width =
+			\textwidth]{KeyCompos_simple.pdf}
+			\vspace{.1in}
+		\column{.7\textwidth}
+			\footnotesize \color{darkred} Appropriate management
+			strategy may vary from population to population
+	\end{columns}
+		\item[] \color{navy} \footnotesize Does social structuring account for variation in
+			summer lamb survival?
+			\color{darkred} Yes.
+	\begin{columns}
+		\column{.3\textwidth}
+			\includegraphics[width =
+			\textwidth]{REhists_simple.pdf}
+			\vspace{.1in}
+		\column{.7\textwidth}
+			\footnotesize \color{darkred}Management efforts should
+			account for local structuring
+	\end{columns}
+
+			\vspace{.1in}
+		\item[] \color{navy} \footnotesize Can we leverage
+				information on social groups to understand 
+			epidemiological rates?
+			\color{darkred} Yes.
+
+	\begin{columns}
+		\column{.3\textwidth}
+			\includegraphics[width =
+			.8\textwidth]{Heatmap_simple.pdf}
+			\vspace{.1in}
+		\column{.7\textwidth}
+			\footnotesize \color{darkred}\textbf{Don't overlook
+			heterogeneity in lamb outcomes}
+	\end{columns}
+			\includegraphics[width =
+	.2\textwidth]{Heatmap_simple.pdf}
+	\end{itemize}
+\end{frame}
+}
+%
+%\begin{frame}[t]
+%	\frametitle{\color{darkred} Ramifications}
+%\vspace{.1in}
+%%
+%%{\color{navy} Empirical Data}
+%%	\begin{itemize}
+%%		\item[] Evidence that social
+%%			substructuring translates to differential lamb
+%%			mortalities
+%%	\end{itemize}
+%%\vspace{.1in}
+%%
+%%{\color{navy} Simulations}
+%%	\begin{itemize}
+%%		\item[] Model is sensitive to lamb mortality
+%%			rates
+%%%			\begin{itemize}
+%%%				\item Suggests research should focus on
+%%%					lamb survival post-exposure, as opposed
+%%%					to factors driving transmission
+%%%			\end{itemize}
+%%%		\item Lambs appear to have some
+%%%			resistance to pathogens 
+%%	\end{itemize}
+%%
+%%\vspace{.1in}
+%%
+%%{\color{navy} Ramifications}
+%	\begin{itemize}
+%		\item[] Direct resources toward understanding differential
+%			infection outcomes
+%		\item[] Experiment with culling, etc. at subpopulation-level
+%	\end{itemize}
+%\end{frame}
+%
+
+
+{\usebackgroundtemplate{\transparent{.5}\parbox[c][\paperheight][c]{\paperwidth}{\centering\includegraphics[height=\paperheight]{431WithLamb.jpg}}}
+
+\begin{frame}[t]
+	\frametitle{\color{darkred}Thanks!}
+\vspace{1.75in}
+
+\begin{columns}[t]
+	\column{.5\textwidth}
+\scriptsize{
+\textcolor{navy}{\textit{Financial support:}}
+
+\begin{itemize}
+	\item[] \color{darkred}Penn State Academic Computing Fellowship program
+	\item[] \color{darkred}Penn State University Graduate Fellowship program
+	\item[] \color{darkred}Morris Animal Foundation
+	\item[] \color{darkred}IDFG, WDFW, ODFW, Hells Canyon Bighorn Sheep Restoration Panel 
+\end{itemize}
+%\vspace{.2in}
+}
+\column{.5\textwidth}
+\scriptsize{
+\textcolor{navy}{\textit{Advisor, mentors, collaborators}}
+\begin{itemize}
+	\item[] \color{darkred}Peter Hudson (PSU)
+	\item[] \color{darkred}Frances Cassirer (IDFG)
+	\item[] \color{darkred}Paul Cross (USGS)
+	\item[] \color{darkred}Raina Plowright (PSU)
+	\item[] \color{darkred}Tom Besser (WSU)
+	\item[] \color{darkred}Andy Dobson (Princeton)
+\end{itemize}
+\vspace{.1in}
+}
+\end{columns}
+\end{frame}
+}
+
+{\usebackgroundtemplate{\transparent{.5}\parbox[c][\paperheight][c]{\paperwidth}{\centering\includegraphics[height=\paperheight]{431WithLamb.jpg}}}
+
+\begin{frame}[t]
+\frametitle{References}
+\begin{itemize}
+\tiny{
+
+\item[] Besser, T.E., E.F. Cassirer, M.A. Highland, P. Wolff, A. Pierce-Allen,
+	K. Mansfield, M.A. Davis, W. Foreyt (2013). ``Bighorn sheep pneumonia:
+	Sorting out the cause of a polymicrobial disease''.  \textit{Preventitive
+	Veterinary Medicine} \textbf{102}: 85-93.
+	\vspace{.1in}
+
+\item[] Plowright, R.K.,\textbf{ K.R. Manlove}, E.F. Cassirer, P.C.Cross, T.
+Besser, P.J. Hudson (2013). ``Use of exposure history to identify patterns of
+immunity to pneumonia in Bighorn Sheep (\textit{Ovis canadensis})''.
+\textit{PLoS One}, \textbf{8}(4): e61919. 
+
+  \vspace{.1in}
+   
+\item[] Cassirer, E.F., R.K. Plowright, \textbf{K.R. Manlove}, P.C. Cross, A.
+Dobson, K. Potter, P.J. Hudson.  ``Spatio-temporal dynamics of pneumonia in
+bighorn sheep (\textit{Ovis canadensis}).'' \textit{Journal of Animal Ecology},
+\textbf{82}: 518-528.
+  \vspace{.1in}
+  
+\item[] Dassanayake, R. et al. (2010). ``\textit{Mycoplasma ovipneumoniae} can
+predispose bighorn sheep to fatal \textit{Mannheimia haemolytica} pneumonia''
+Veterinary Microbiology 145: 354-359.
+'}
+  \end{itemize}
+\end{frame}
+}
+
+\begin{frame}
+	\includegraphics[width = \textwidth]{Besser_2013_PercMoviByAge.pdf}
+\end{frame}
+
+\end{document}
